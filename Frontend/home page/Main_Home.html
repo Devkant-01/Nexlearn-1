@@ -1,136 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    body, html {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
-      height: 100vh;
-      overflow: hidden;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
     }
-    .welcome-page {
-      display: flex;
+
+    body, html {
       height: 100%;
+      background: #7ec7c3;
     }
-    .left-side {
-      background: #f1f2f3;
-      flex: 1;
-      padding: 60px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .left-side h2 {
-      color: #999;
-      font-size: 1rem;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-    .left-side h1 {
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 20px;
-    }
-    .left-side p {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.5;
-    }
-    .left-side a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .right-side {
-      background: #ff7b00;
-      flex: 1;
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffa006 20%, #7ec7c3 100%);
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
     }
-    .speech-bubble {
-      background: #fff;
-      padding: 20px 30px;
-      border-radius: 15px;
-      position: relative;
-      font-size: 2rem;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      color: #fff;
+    }
+
+    .logo {
       font-weight: bold;
-      color: #333;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      font-size: 18px;
     }
-    .speech-bubble::after {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      left: 40px;
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      transform: rotate(45deg);
-      box-shadow: -3px 3px 5px rgba(0,0,0,0.05);
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
     }
-    .megaphone-icon {
-      position: absolute;
-      bottom: 40px;
-      left: 40px;
-      font-size: 2.5rem;
-      color: white;
-      transform: rotate(-20deg);
-    }
-    .right-side a {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
+
+    .nav-links li a {
       text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ddd;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+    }
+
+    .hero {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
       font-size: 1rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 8px 15px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
     }
-    .right-side a:hover {
-      background-color: rgba(255, 255, 255, 0.4);
+
+    .cta-button {
+      background-color: #59c4b5;
+      color: #fff;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    @media (max-width: 768px) {
-      .welcome-page {
-        flex-direction: column;
-      }
-      .right-side {
-        min-height: 300px;
-      }
-      .right-side a {
-        right: 20px;
-      }
+
+    .cta-button:hover {
+      background-color: #45a297;
     }
   </style>
 </head>
 <body>
-
-<div class="welcome-page">
-  <div class="left-side">
-    
-    <h2>Ultimate Guide</h2>
-    <h1>Website Welcome Messages: <br>Skyrocket Conversions & Enhance UX</h1>
-    <p>Discover how powerful welcome pages and first impressions can make or break user engagement. Start creating impactful welcome experiences today!</p>
-  </div>
-  <div class="right-side">
-    <div class="speech-bubble">WELCOME</div>
-    <i class="fas fa-bullhorn megaphone-icon"></i>
-    <a href="../home page/home.html">Home</a>
-  </div>
-</div>
-
+  <header>
+    <nav class="navbar">
+      <div class="logo">Website Logo</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+      <div class="menu-icon">&#9776;</div>
+    </nav>
+    <div class="hero">
+      <h1>WELCOME TO NEXLEARN</h1>
+      <p>.</p>
+      <a href="#" class="cta-button">Join Now</a>
+    </div>
+  </header>
 </body>
 </html>
